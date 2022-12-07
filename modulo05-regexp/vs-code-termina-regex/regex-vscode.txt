@@ -1,0 +1,37 @@
+1 opcao para validar cpf
+^\d{3}.\d{3}.\d{3}-\d{2}$
+\d -> serve para pegar digitos
+
+2 opcao para procurar por todos os pontos e tracos no texto
+replace [.-] - vazio
+
+123.123.123-12
+123.123.123-13
+123.123.123-14
+123.123.123-15
+897.123.123.16
+
+-------------------------------------------------
+CSV para JSON
+
+\w -> pega uma letra
+\w+ -> pega tudo até que apareça um caracter especial
+
+Wendel, Erick
+Gomes, Laila
+Johnson, Jose
+
+replace ^(\w+),\s(\w+)$ por 
+{firstName: $2, lastName: $1}
+
+----------------------------------------------------
+Markdown para html
+
+Me acompanhe no [GitHub](http://www.github.com/anapaula-noleto)
+
+Para aprender Regex esse [site](https://regex101.com) é o melhor.
+
+Boa sorte!
+
+replace \[(.*?)\]\(([http|https].*?)\) por
+<a href="$2">$1</a>
